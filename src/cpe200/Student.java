@@ -14,13 +14,22 @@ public class Student {
             yob = 1990;
             status = false;
     }
-
+    public Student(String name2 , String id2){
+            name = name2==""?"John Doe":name2;
+            id = isValidStudent_id(id2)?id2:"560610000";
+    }
+    public Student(String name2 , String id2 , int yob2){
+            name = name2==""?"John Doe":name2;
+            id = isValidStudent_id(id2)?id2:"560610000";
+            yob = isValidYOB(yob2)?yob2:1990;
+    }
     public Student(String name2 , String id2 , int yob2 , boolean status2) {
             name = name2==""?"John Doe":name2;
             id = isValidStudent_id(id2)?id2:"560610000";
             yob = isValidYOB(yob2)?yob2:1990;
             status = status2;
     }
+
     public String getName(){
         return name;
     }
